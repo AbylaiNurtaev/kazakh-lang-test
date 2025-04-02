@@ -3,17 +3,20 @@ import { useEffect, useState } from "react";
 const questions = [
   {
     id: 3,
+    mainText: "Жеті атаны тарату",
     question: "Ата-текті төменнен жоғары қарай ретімен орналастыр: бала, әке, ата, ...?",
     options: ["немере", "жамағайын", "немене", "туажат"],
     correct: "немере",
   },
   {
     id: 5,
+    mainText: "Ер жігіттің жеті қасиеті",
     question: "Ер жігіттің бойындағы жеті қасиетінің бірі – «қаны» неде?",
     options: ["атта", "мылтықта", "қақпанда", "тазыда"],
     correct: "атта",
   },
   {
+    mainText: "Бала тәрбиесі – баршаның ісі",
     id: 11,
     question: "«Балада рух, дене тәрбиесі және такамүлі» дегенді кім айтты?",
     options: ["Ибн Сина", "Омар Хайям", "Әл Фараби", "М.Жұмабаев"],
@@ -21,6 +24,7 @@ const questions = [
   },
   {
     id: 12,
+    mainText: "Бала тәрбиесі – баршаның ісі",
     question: "Суреттегі мәтін мен мазмұн арасындағы сәйкессіздік нені білдіреді?",
     options: [
       "қарызын төлеу мен өсім туралы",
@@ -32,12 +36,14 @@ const questions = [
   },
   {
     id: 16,
+    mainText: "Бәйтерек",
     question: "«Бәйтерек» символының негізі қазақтың қай аңызына байланысты?",
     options: ["Самұрық құсы туралы", "Көк бөрі туралы", "Алаша хан туралы", "Ер Төстік туралы"],
     correct: "Самұрық құсы туралы",
   },
   {
     id: 17,
+    mainText: "Бәйтерек",
     question: "Қазақстан Республикасының Туы қойылған мереке және тұғыр биіктігі қандай?",
     options: [
       "Тәуелсіздік күні, 91 метр",
@@ -55,6 +61,7 @@ const questions = [
   },
   {
     id: 19,
+    mainText: "Мүмкіндігі шектеулі жандарға жасалған жағдай",
     question: "Арнайы курс дегеніміз не?",
     options: ["Кәсіби біліктілікті арттыру", "Мамандық ауыстыру", "Шетелге бару", "Тіл үйрену"],
     correct: "Кәсіби біліктілікті арттыру",
@@ -62,6 +69,7 @@ const questions = [
   {
     id: 22,
     question: "Бүкіләлемдік кітап күні неге байланысты өтеді?",
+    mainText: "Ағылшын тілі туралы ең қызықты мәліметтер",
     options: [
       "Шекспирдің дүниеге келген және қайтыс болған күні",
       "Гутенбергтің баспа ойлап тапқан күні",
@@ -73,11 +81,13 @@ const questions = [
   {
     id: 23,
     question: "У. Шекспирдің туған және қайтыс болған күні қай күн?",
+    mainText: "Ағылшын тілі туралы ең қызықты мәліметтер",
     options: ["23 сәуір", "1 мамыр", "12 сәуір", "30 сәуір"],
     correct: "23 сәуір",
   },
   {
     id: 27,
+    mainText: "Ұялы телефон",
     question: "Қандай жағдайда телефонмен сөйлесуде шектен тыс сыпайылық ерсі болып саналады?",
     options: [
       "Телефонистпен сөйлескенде",
@@ -89,6 +99,7 @@ const questions = [
   },
   {
     id: 32,
+    mainText: "Ақпарат құралдары",
     question: "БАҚ кімдердің эстетикалық сұранысын өтейді?",
     options: [
       "Би-би-cи компаниясының",
@@ -100,6 +111,7 @@ const questions = [
   },
   {
     id: 34,
+    mainText: "Түркістан қаласы туристер назарында",
     question: "Бұл кесенені неліктен ғажайып ғимарат деп атайды?",
     options: [
       "тарихи құндылығы бар ескерткіш",
@@ -112,12 +124,14 @@ const questions = [
   {
     id: 40,
     question: "Футбол чемпионаты өткен екі азиялық ел?",
+    mainText: "Футболдан әлем чемпионаттары",
     options: ["Корея, Жапония", "Катар, Қытай", "Иран, Үндістан", "Израиль, Жапония"],
     correct: "Корея, Жапония",
   },
   {
     id: 41,
     question: "Қай елдерде футбол чемпионаты екі рет өткен?",
+    mainText: "Футболдан әлем чемпионаттары",
     options: [
       "Мексика, Германия, Италия",
       "Аргентина, Англия, Бразилия",
@@ -128,6 +142,7 @@ const questions = [
   },
   {
     id: 46,
+    mainText: "Кофенің шығуы туралы",
     question: "Құпия қалай ашылды?",
     options: [
       "ешкілердің белгісіз жемісті жеуі",
@@ -139,12 +154,14 @@ const questions = [
   },
   {
     id: 50,
+    mainText: "Қымыз –шипалы сусын",
     question: "Бие сүтінің уыз дәмі таралған кезде ашытылған қою қымыз қалай аталады?",
     options: ["уыз қымыз", "қорабалы қымыз", "сары қымыз", "бал қымыз"],
     correct: "уыз қымыз",
   },
   {
     id: 55,
+    mainText: "Армысың, жас ұрпақ!",
     question: "Бұл сөздердің авторы Ы.Жақаев кім?",
     options: ["күрішші", "малшы", "жазушы", "шопан"],
     correct: "күрішші",
@@ -152,12 +169,14 @@ const questions = [
   {
     id: 56,
     question: "Автор өзінің жастарға үндеуін не деп атайды?",
+    mainText: "Армысың, жас ұрпақ!",
     options: ["бата", "хат", "аманат", "өсиет"],
     correct: "бата",
   },
   {
     id: 57,
     question: "Автордың негізгі ойы не туралы?",
+    mainText: "Армысың, жас ұрпақ!",
     options: [
       "өмірдің әр мезетін бағалау",
       "табиғатты сүю",
@@ -231,7 +250,7 @@ export default function App() {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e0f2fe', padding: '20px' }}>
         <div style={{ background: 'white', padding: '30px', borderRadius: '16px', boxShadow: '0 10px 25px rgba(0,0,0,0.1)', maxWidth: '500px', width: '100%', textAlign: 'center' }}>
-          <h1 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '20px' }}>Қазақ тілі тесті</h1>
+          <h1 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '20px' }}>Тест</h1>
           <p style={{ marginBottom: '30px', color: '#555' }}>Барлығы {questions.length} сұрақ. Дұрыс жауаптар саны бойынша нәтиже шығады.</p>
           <button onClick={() => setStarted(true)} style={{ background: '#2563eb', color: 'white', padding: '12px 24px', borderRadius: '8px', fontSize: '16px', border: 'none', cursor: 'pointer' }}>Тесті бастау</button>
         </div>
@@ -254,10 +273,11 @@ export default function App() {
   return (
     <div style={{ minHeight: '100vh', background: '#f3f4f6', padding: '20px' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', background: 'white', padding: '30px', borderRadius: '16px', boxShadow: '0 8px 16px rgba(0,0,0,0.05)' }}>
-        <h1 style={{ fontSize: '26px', fontWeight: 'bold', marginBottom: '20px', color: '#1e3a8a', textAlign: 'center' }}>Қазақша тест</h1>
+        <h1 style={{ fontSize: '26px', fontWeight: 'bold', marginBottom: '20px', color: '#1e3a8a', textAlign: 'center' }}>Тест</h1>
 
         {questions.map((q, i) => (
           <div key={q.id} style={{ marginBottom: '30px' }}>
+            <p style={{ fontWeight: '700', marginBottom: '10px', color: '#1cc7b0' }}>{q.mainText}</p>
             <p style={{ fontWeight: '500', marginBottom: '10px' }}>{i + 1}. {q.question}</p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               {q.options.map((opt) => {
